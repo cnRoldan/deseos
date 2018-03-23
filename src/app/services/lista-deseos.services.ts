@@ -13,9 +13,16 @@ export class ListaDeseosService {
     let lista2 = new Lista('Juegos de deseo');
     let lista3 = new Lista('Cosas de la universidad');
 
-    this.listas.push(lista1);
-    this.listas.push(lista2);
-    this.listas.push(lista3);
+    try {
+      if (lista1!=null&&lista2!=null&&lista3!=null){
+        this.listas.push(lista1);
+        this.listas.push(lista2);
+        this.listas.push(lista3);
+      }
+    }catch(e){
+
+    }
+
 
     console.log("Servicio creado");
    }
